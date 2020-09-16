@@ -24,7 +24,10 @@ class AhCall:
 
 if __name__ == '__main__':
     ah_call = AhCall()
-    access_token = ah_call.get_token('41aa51073e5c4ef1a80682f2f4b24cec', 'Vx0dE7jjw7zPoekWjiI3fcNiYkAN6lxb')
-    ah_call.api_to_gz('5', access_token)
-
+    access_token = 'bogus'
+    try:
+        ah_call.api_to_gz('5', access_token)
+    except:
+        access_token = ah_call.get_token('41aa51073e5c4ef1a80682f2f4b24cec', 'Vx0dE7jjw7zPoekWjiI3fcNiYkAN6lxb')
+        ah_call.api_to_gz('5', access_token)
 
