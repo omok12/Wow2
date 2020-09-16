@@ -24,7 +24,6 @@ class AhCall:
 
 if __name__ == '__main__':
     ah_call = AhCall()
-    access_token = 'bogus'
     try:
         ah_call.api_to_gz('5', access_token)
     except:
